@@ -33,6 +33,7 @@ struct Create {
         label.numberOfLines = 0
         label.font = Default.font
         label.textColor = .white
+        label.textAlignment = .center
         
         return label
     }
