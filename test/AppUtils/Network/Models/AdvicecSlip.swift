@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Advice
-struct Advice: Codable {
+struct Data: Codable {
     
     let slip: Slip
 }

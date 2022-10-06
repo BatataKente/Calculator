@@ -50,7 +50,7 @@ class View_1: UIViewController {
         view.backgroundColor = .systemRed
         
         valueGetter.stack.constraint(by: [.top, .leading, .trailing])
-        button.constraint([.bottom: -20, .leading: 20])
+        button.constraint([.bottom: -Default.margins, .leading: Default.margins])
         resultLabel.constraint(by: [.centerX, .centerY])
         
         valueGetter.a.addTarget(self, action: #selector(textFieldsTarget), for: .editingDidEnd)

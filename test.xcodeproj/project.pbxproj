@@ -16,7 +16,7 @@
 		1410747E28EF0D5F00679133 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410747D28EF0D5F00679133 /* testUITests.swift */; };
 		1410748028EF0D5F00679133 /* testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410747F28EF0D5F00679133 /* testUITestsLaunchTests.swift */; };
 		1410749C28EF159D00679133 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410749B28EF159D00679133 /* Calculator.swift */; };
-		1410749E28EF244F00679133 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410749D28EF244F00679133 /* Assets.swift */; };
+		1410749E28EF244F00679133 /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410749D28EF244F00679133 /* Default.swift */; };
 		1457BD9728EF4004006BBD12 /* View_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457BD9628EF4004006BBD12 /* View_2.swift */; };
 		1457BD9928EF403F006BBD12 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457BD9828EF403F006BBD12 /* Network.swift */; };
 		1457BD9B28EF4052006BBD12 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457BD9A28EF4052006BBD12 /* Create.swift */; };
@@ -56,7 +56,7 @@
 		1410747F28EF0D5F00679133 /* testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1410748E28EF10DC00679133 /* test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-Bridging-Header.h"; sourceTree = "<group>"; };
 		1410749B28EF159D00679133 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
-		1410749D28EF244F00679133 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		1410749D28EF244F00679133 /* Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
 		1457BD9628EF4004006BBD12 /* View_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_2.swift; sourceTree = "<group>"; };
 		1457BD9828EF403F006BBD12 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1457BD9A28EF4052006BBD12 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				1457BD9C28EF4248006BBD12 /* Network */,
 				1410749B28EF159D00679133 /* Calculator.swift */,
 				1410746528EF0D5E00679133 /* Assets.xcassets */,
-				1410749D28EF244F00679133 /* Assets.swift */,
+				1410749D28EF244F00679133 /* Default.swift */,
 				1457BD9A28EF4052006BBD12 /* Create.swift */,
 			);
 			path = AppUtils;
@@ -325,7 +325,7 @@
 				1457BD9F28EF425D006BBD12 /* AdvicecSlip.swift in Sources */,
 				1457BD9B28EF4052006BBD12 /* Create.swift in Sources */,
 				1410745D28EF0D5D00679133 /* AppDelegate.swift in Sources */,
-				1410749E28EF244F00679133 /* Assets.swift in Sources */,
+				1410749E28EF244F00679133 /* Default.swift in Sources */,
 				1457BD9928EF403F006BBD12 /* Network.swift in Sources */,
 				1410745F28EF0D5D00679133 /* SceneDelegate.swift in Sources */,
 			);

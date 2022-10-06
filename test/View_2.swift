@@ -9,7 +9,7 @@ import UIKit
 
 class View_2: UIViewController {
     
-    private let label = Create.label("Farofa")
+    private let label = Create.label()
     
     private lazy var button = Create.button("Back") {_ in
         
@@ -23,7 +23,12 @@ class View_2: UIViewController {
         view.addSubviews([label, button])
         view.backgroundColor = .systemMint
         
-        label.constraint(by: [.centerY, .centerX])
-        button.constraint([.top: 0, .trailing: -20])
+        label.constraint([.centerY: 0, .leading: Default.margins, .trailing: -Default.margins])
+        button.constraint([.top: 0, .trailing: -Default.margins])
+        
+        Network.request {[weak self] data in
+            
+            self?.label.text = data.slip.advice
+        }
     }
 }
