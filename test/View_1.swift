@@ -7,7 +7,7 @@
 
 import UIKit
 
-class View: UIViewController {
+class View_1: UIViewController {
     
     private struct ValueGetter {
         
@@ -16,9 +16,9 @@ class View: UIViewController {
     
     private let valueGetter: ValueGetter = {
         
-        let a = App.Create.textField("a")
-        let b = App.Create.textField("b")
-        let c = App.Create.textField("c")
+        let a = Create.textField("a")
+        let b = Create.textField("b")
+        let c = Create.textField("c")
         
         let valueInStack = UIStackView(arrangedSubviews: [a, b, c])
         valueInStack.distribution = .fillEqually
@@ -29,10 +29,7 @@ class View: UIViewController {
     
     private let resultLabel: UILabel = {
         
-        let resultLabel = UILabel()
-        resultLabel.numberOfLines = 0
-        resultLabel.font = App.font
-        resultLabel.textColor = .white
+        let resultLabel = Create.label()
         
         return resultLabel
     }()
@@ -41,20 +38,20 @@ class View: UIViewController {
         
         super.viewDidLoad()
         
-        view.addSubview(valueGetter.stack)
-        view.addSubview(resultLabel)
+        let button = Create.button("Go") {_ in
+            
+            let view = View_2()
+            view.modalPresentationStyle = .fullScreen
+            
+            self.present(view, animated: true)
+        }
+        
+        view.addSubviews([valueGetter.stack, resultLabel, button])
         view.backgroundColor = .systemRed
         
-        valueGetter.stack.translatesAutoresizingMaskIntoConstraints = false
-        
-        valueGetter.stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        valueGetter.stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        valueGetter.stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        
-        resultLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        resultLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        resultLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        valueGetter.stack.constraint(by: [.top, .leading, .trailing])
+        button.constraint([.bottom: -Default.margins, .leading: Default.margins])
+        resultLabel.constraint(by: [.centerX, .centerY])
         
         valueGetter.a.addTarget(self, action: #selector(textFieldsTarget), for: .editingDidEnd)
         valueGetter.b.addTarget(self, action: #selector(textFieldsTarget), for: .editingDidEnd)
